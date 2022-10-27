@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    function factor(Num){
+      let arr = [];
+      if(Num <= 0)
+        alert("Please enter a positive integer!!!");
+      else{
+          arr.push(1);
+          for (let i = 2; i <= Num; i++) {
+              if(Num%i == 0){
+                  arr.push(i);
+              }
+          }
+          alert("[" + arr.join(",") + "]");
+      }
+    }
+  </script>
+  <label for = 'number'>Please enter a number</label>
+  <input type ='text' id ='number'><br><br>
+  <input type = 'button' id ='results' value ='Find factor'
+         onclick="factor(Number(document.getElementById('number').value));">
+</body>
+</html>

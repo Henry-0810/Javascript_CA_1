@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function replaceElements(elm,idx,noOfElmsToRemove,newElm){
+            let arr = [1,2,3,4,5,6,7,8,9,10];
+            if(idx >= arr.length || idx < 0){
+                alert("Index out of bound!!!");
+            }
+            else if(!arr.includes(elm,idx)){
+                alert("Element not in given index or does not exist!!!");
+            }
+            else{
+                arr.splice(idx,noOfElmsToRemove,newElm);
+                console.log(arr.join("-"));
+            }
+        }
+        let elements = Number(window.prompt("Key in an element you want to remove"));
+        let indexToRemove = Number(window.prompt("Please enter the start index"));
+        let noOfElementsToRemove = Number(window.prompt("How many elements do you want to remove"));
+        let newElement = Number(window.prompt("Enter a new number to replace removed element"));
+        replaceElements(elements,indexToRemove,noOfElementsToRemove,newElement);
+    </script>
+</body>
+</html>
